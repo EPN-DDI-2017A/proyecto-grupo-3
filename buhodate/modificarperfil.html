@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Perfil</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/modificar_perfil.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="menu-inicial">
+    <nav class="navbar navbar-toggleable-md navbar-light">
+        <div class="row">
+            <div class="col-7">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo1.png" alt="Logo">BuhoDate
+                </a>
+            </div>
+            <div class="col-5">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu" aria-controls="#menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                   <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Citas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notificaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+    </nav>
+    </div>
+    <br>
+    <div class="contenido">
+        <div class="row">
+            <div class="col-6">
+        <!--<ul class="list-unstyled">
+            <li class="media">-->
+                <h3>Bienvenido: alias</h3>
+                <li class="media my-4">
+                    <ul class="">
+                        <li class="list-group-item justify-content-between">
+                            <img src="./img/usuario.png">
+                        </li>
+                        <li class="list-group-item justify-content-between">
+                            <label>Sobre ti:</label>
+                            <input class="form-control" >
+                        </li>
+                        <li class="list-group-item justify-content-between">
+                            <label>Carrera:</label>
+                            <div class="col-10">
+                                <input class="form-control" >
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+               <!-- <div class="media-body">-->
+            <div class="col">
+                    <button type="button" class="btn btn-secondary btn-lg" id="encuentra">Encuentra tu Pareja</button>
+                <div class="form-group row">
+                    <br>
+                    <label class="col-2 col-form-label">Nombre:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Apellido:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Alias:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Edad:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Telefono:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <!--<fieldset class="form-group row">-->
+                        <legend class="col-form-legend col-sm-2">Sexo:</legend>
+                        <div class="col-10">
+
+                            <!--<div class="form-check">-->
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    Hombre
+                                </label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    Mujer
+                                </label>
+                            </div>
+                       <!-- </div>-->
+                    <!--</fieldset>-->
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Provincia:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Ciudad:</label>
+                    <div class="col-10">
+                        <input class="form-control" >
+                    </div>
+                </div>
+                    <li class="list-group-item justify-content-between">
+                        <button type="button" class="btn btn-secondary btn-lg" id="modificar">Guardar</button>
+                    </li>
+                </ul>
+                </div>
+            <!--</li>-->
+    </div>
+    <div class="card-footer">
+        <div class="info">
+            <p>BuhoDate Copyright &copy; 2017. Todos los derechos reservados.</p>
+        </div>
+        <div id="sociales" class="col-2">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-pinterest" aria-hidden="true"></i>
+
+        </div>
+    </div>
+
+</div>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
