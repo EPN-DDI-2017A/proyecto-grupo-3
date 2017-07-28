@@ -1,0 +1,209 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}BuhoDate | ESFOT{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {#Header logo y navegación#}
+        <div class="row" id="menu">
+            <div class=" col col-lg-4 col-md-3 col-sm-12">
+                <a href="{{ asset('/index') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
+            </div>
+            <div class="col col-lg-8 col-md-9 col-sm-12" id="pestanas">
+                <ul class="nav" id="index-menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ asset('/index') }}">Buscar Cita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demostracion">Demostración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        {# Video de Fondo#}
+        <div class="row fondo">
+            <div class="col">
+                <video autoplay loop class="video">
+                    <source src="{{ asset('videos/MP4/Yes-No.mp4') }}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="{{ asset('videos/WEBM/Yes-No.webm') }}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+            </div>
+        </div>
+        {# Texto de Bienvenida #}
+        <div class="row pos">
+            <div class="col-2 social">
+                {#Redes Sociales Header#}
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            {# Texto y Boton#}
+            <div class="col-10">
+                <div class="row">
+                    <div class="col msj1">
+                        <h1 class="text-white">La cita de tus sueños</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col distancia">
+                        <button class="boton1">Buscar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Demostración #}
+        <div class="row demo" id="demostracion">
+            <div class="col">
+                {# Texto #}
+                <div class="row" id="demo1">
+                    <div class="col text-center"><h1>¿Cómo funciona?</h1></div>
+                </div>
+                {# Card Boostrap#}
+                <div class="row" id="demo2">
+                    {# Regístrate #}
+                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/registro.png') }}" alt="registro" width="200" height="200">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Regístrate</h4>
+                                <p class="card-text text-justify">
+                                    Crea una cuenta con tu correo institucional y una contraseña
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Perfil #}
+                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/perfil.png') }}" alt="perfil" width="200" height="200">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Crea un perfil</h4>
+                                <p class="card-text text-justify">
+                                    Personaliza tu perfil, agrega tu foto y describe tus pasatiempos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Buscar #}
+                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/buscar_perfil.png') }}" alt="perfil" width="200" height="200">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Busca a la persona ideal</h4>
+                                <p class="card-text text-justify">
+                                    Empieza a conocer personas, ya solo estas a un solo paso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Cita #}
+                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/calendar.png') }}" alt="perfil" width="200" height="200">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Haz la cita</h4>
+                                <p class="card-text text-justify">
+                                    Ten una cita y preparate para vivir experiencias inolvidables
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {# Boton Demo #}
+                <div class="row" id="demo3">
+                    <div class="col col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-2">
+                        <button class="boton2" data-toggle="modal" data-target=".bd-example-modal-lg">Ver Demo</button>
+
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <iframe width="800" height="491" src="http://www.powtoon.com/embed/cJb7VPRhv6Y/?autoplay=1" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# Contactos #}
+    <div class="container-fluid" id="contactos">
+        <div class="container">
+            <div class="row">
+                {# Datos de Contactos #}
+                <div class="col col-lg-5 col-sm-12" id="datos_cont">
+                    <div><h2 class="">Contáctanos en: </h2></div>
+                    <br>
+                        <div>
+                        <i class="fa fa-map-marker te" aria-hidden="true"> Ladrón de Guevara E11·253 [PO·Box 17-01-2759]
+                            Quito · Ecuador</i>
+                            <br>
+                        <i class="fa fa-phone" aria-hidden="true"> (+593) 2 2976 300</i>
+                            <br>
+                        <i class="fa fa-envelope" aria-hidden="true"> info@epn.edu.ec</i>
+                    </div>
+                </div>
+                {# Logo 2#}
+                <div class="col col-lg-2 col-sm-12 align-self-center">
+                    <img src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
+                </div>
+                {# Formulario #}
+                <div class="col col-lg-5 col-sm-12" id="form_sms">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Mensaje">
+                        </div>
+                        <div>
+                            <button class="btn btn-warning">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            {% block footer %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8 text-white">
+                            <p><strong>BuhoDate</strong> Copyright: © 2017. Todos los derechos reservados.</p>
+                        </div>
+                        <div class="col-4" id="foot_SN">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+        </footer>
+    </div>
+
+{% endblock %}

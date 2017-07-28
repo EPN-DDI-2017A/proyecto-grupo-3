@@ -1,0 +1,10 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}AppBundle:usuario:registro{% endblock %}
+
+{% block body %}
+<h1>Welcome to the usuario:registro page</h1>
+    {{ form_start(form)}}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
