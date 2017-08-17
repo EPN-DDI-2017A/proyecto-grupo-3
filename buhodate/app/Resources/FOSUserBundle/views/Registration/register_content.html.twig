@@ -1,0 +1,66 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{# --- Titulo --- #}
+<div class="row">
+    <div class="col">
+        <h1 class="text-center text-muted">Regístrate</h1>
+    </div>
+</div>
+
+{# --- Logo --- #}
+<div class="row">
+    <div class="col">
+        <img class="text-center" src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
+    </div>
+</div>
+    {{ form_start(form, {
+        'method': 'post',
+        'action': path('fos_user_registration_register'),
+        'attr': {
+            'class': 'fos_user_registration_register form-group',
+            'id' : 'registroform'
+        }}) }}
+<div class="form-group row">
+    <div class="col">
+        {{ form_widget(form.email, { 'attr': {
+            'class' : 'form-control',
+            'placeholder' : 'Ingrese su correo EPN',
+        }}) }}
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col">
+        {{ form_widget(form.username, { 'attr': {
+            'class' : 'form-control',
+            'placeholder' : 'Nombre de Usuario',
+        }}) }}
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col">
+        {{ form_widget(form.plainPassword.first, { 'attr': {
+            'class' : 'form-control',
+            'placeholder' : 'Ingrese su contraseña',
+        }}) }}
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col">
+        {{ form_widget(form.plainPassword.second, { 'attr': {
+            'class' : 'form-control',
+            'placeholder' : 'Repita su contraseña',
+        }}) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <input class="btn boton1" type="submit" value="{{ 'registration.submit'|trans }}" />
+    </div>
+</div>
+{{ form_end(form) }}
+
+<div class="row">
+    <div class="col">
+        <p class="text-center">¿Ya se encuentra registrado? <a href="{{ asset('/login') }}">Inicie Sesión</a></p>
+    </div>
+</div>

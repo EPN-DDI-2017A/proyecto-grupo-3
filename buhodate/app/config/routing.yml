@@ -1,0 +1,21 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_user_registration:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+
+fos_user_registration_register:
+    path: /registro
+    defaults: { _controller: FOSUserBundle:Registration:register, methods: GET | POST }
+
+fos_user_registration_confirmed:
+    path: /confirmacion
+    defaults: { _controller: FOSUserBundle:Registration:confirmed, methods: GET}
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /perfil

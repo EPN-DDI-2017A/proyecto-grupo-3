@@ -1,0 +1,35 @@
+{% extends 'menu.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <h3 class="text-center text-muted">Sube una foto</h3>
+        </div>
+    </div>
+    {# -- Comienza Formulario -- #}
+    <div class="row">
+        <div class="col">
+            {{ form_start(form, { 'attr' : {
+                'id' : 'modificar',
+                'class' : 'form-group',
+            }}) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Elegir:</h3>
+            {{ form_widget(form.foto, { 'attr' : {
+                'class' : 'form-control'
+
+            }}) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input class="btn boton2" type="submit" value="Aceptar" />
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{# --- Titulo --- #}
+<div class="row">
+    <div class="col">
+        <h1 class="text-center text-muted">Inicia Sesión</h1>
+    </div>
+</div>
+
+{# --- Logo --- #}
+<div class="row">
+    <div class="col">
+        <img class="text-center align-self-center" src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
+    </div>
+</div>
+{# --- Mensaje de Error ---#}
+<div class="row">
+    {% if error %}
+        <div class="col">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+</div>
+
+<form class="form-group" action="{{ path("fos_user_security_check") }}" method="post" id="loginform">
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    {# --- Nombre del usuario --- #}
+    <div class="form-group row">
+        <div class="col">
+            <input class="form-control" type="text" id="username" name="_username" placeholder="Usuario o Email" value="{{ last_username }}" required="required" />
+        </div>
+    </div>
+
+    {# --- Contraseña --- #}
+    <div class="form-group row">
+        <div class="col">
+            <input class="form-control" type="password" id="password" name="_password" placeholder="Contraseña" required="required" />
+        </div>
+    </div>
+
+    {# --- Recordarme check --- #}
+    <div class="form-check row">
+        <div class="col">
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" placeholder="Recordarme" />
+            <label class="text-muted" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        </div>
+    </div>
+
+    {# --- Boton de Ingreso --- #}
+    <div class="row">
+        <div class="col">
+            <input class="btn boton1" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+        </div>
+    </div>
+    {# -- Link de Registro -- #}
+    <div class="row">
+        <div class="col">
+            <p class="text-center">¿Aún no tienes cuenta? <a href="{{ asset('/registro') }}">Regístrate</a></p>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,19 @@
+{% extends 'menu.html.twig' %}
+
+{% block body %}
+    <h1>User creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.foto) }}
+        {{ form_row(form.tipo) }}
+        {{ form_row(form.descripcion) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+   {#<ul>
+        <li>
+            <a href="{{ path('usuario_index') }}">Back to the list</a>
+        </li>
+    </ul>
+    #}
+{% endblock %}
