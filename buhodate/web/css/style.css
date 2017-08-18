@@ -203,6 +203,21 @@ footer{
 .topnav .icon {
     display: none;
 }
+.col-8{
+    margin-left: 10px;
+}
+.boton2{
+    margin-top: 30px;
+}
+.btn-danger{
+
+}
+@media screen and (max-width: 1200px){
+    h3{
+        font-size: 140%;
+    }
+}
+
 @media screen and (max-width: 990px){
     .msj1 h1{
         font-size: 300%;
@@ -230,6 +245,19 @@ footer{
         display: block;
         text-align: left;
     }
+    h3{
+        font-size: 120%;
+    }
+    .row{
+        margin-top: 8px;
+    }
+    .col-4{
+        display: inline-flex;
+    }
+    /*.col-9{
+        margin-left: 40px;
+    }*/
+
 }
 
 @media screen and (max-width: 760px){
@@ -240,6 +268,19 @@ footer{
         font-size: 150%;
         padding: 4px 8%;
     }
+    h3{
+        font-size: 120%;
+    }
+    .row{
+        margin-top: 8px;
+    }
+    .btn-danger{
+        text-align: center;
+    }
+    .col-4{
+        display: inline-flex;
+    }
+
 }
 @media screen and (max-width: 570px){
     .msj1 h1{
@@ -252,7 +293,52 @@ footer{
         font-size: 120%;
         padding: 3px 6%;
     }
+    .row{
+        margin-top: 8px;
+    }
+    .col-9{
+        margin-left: 20px;
+    }
+    .btn-danger{
+        margin-left: 90px;
+    }
+    .col-4{
+        display: inline-flex;
+    }
 }
+@media screen and (max-width: 570px) {
+    h3{
+        font-size: 120%;
+    }
+    .row{
+        margin-top: 8px;
+    }
+    .btn-danger{
+        margin-left: 90px;
+    }
+    .col-4{
+        display: inline-flex;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h3{
+        font-size: 100%;
+    }
+    .col-4{
+        display: inline-flex;
+    }
+    .row{
+        margin-top: 8px;
+    }
+    .btn-danger{
+        margin-left: 90px;
+    }
+}
+@media screen and (max-width: 500px) {
+
+}
+
 
 
 
