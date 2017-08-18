@@ -1,0 +1,140 @@
+{% extends 'menu.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h1 class="text-muted">Bienvenido: {{ app.user.username }}</h1>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a class="boton1" href="{{ path('usuario_index') }}">Encuentra a tu pareja</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <div class="img-fluid">
+                {% if foto %}
+                    <img class="imagenPerfil" src="{{ foto.foto }}" alt="Foto Perfil" width="300" height="300">
+                {% endif %}
+            </div>
+            <div>
+                <h3>Sobre ti:</h3>
+                <p>{{ user.descripcion }}</p>
+            </div>
+            <div>
+                <h3>Carrera: </h3>
+                <p>Tecnología en {{ user.carrera }}</p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="row">
+                <div class="col-3">
+                    <h3>Nombre: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="nombre">{{ user.nombre }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Apellido: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="apellido">{{ user.apellido }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Usuario: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="usuario">{{ user.username }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Edad: </h3>
+                </div>
+                <div class="col-9">
+                    {% if user.fnaci %}
+                        <h4 class="text-muted" id="edad">
+                            {{ "now"|date("Y-m-d") - user.fnaci|date('Y-m-d') }} años
+                        </h4>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Teléfono: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="fono">(+593) {{ user.fono }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Sexo: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="sexo">{{ user.sexo }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Dirección: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="dir">{{ user.direccion }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>País: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="pais">{{ user.pais }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Provincia: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="provincia">{{ user.provincia }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Ciudad: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="ciudad">{{ user.ciudad }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <a class="btn boton2" href="{{ path('usuario_edit', { 'id': user.id }) }}">Modificar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#
+    <ul>
+
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    #}
+{% endblock %}

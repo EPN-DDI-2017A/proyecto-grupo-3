@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Galerias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Foto</th>
+                <th>Tipo</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for galeria in galerias %}
+            <tr>
+                <td><a href="{{ path('galeria_show', { 'id': galeria.id }) }}">{{ galeria.id }}</a></td>
+                <td><img src="{{ asset('imagen_directory' ~ galeria.foto) }}"></td>
+                <td>{{ galeria.tipo }}</td>
+                <td>{{ galeria.descripcion }}</td>
+                <td>{{ galeria.estado }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('galeria_show', { 'id': galeria.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('galeria_edit', { 'id': galeria.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('galeria_new') }}">Create a new galerium</a>
+        </li>
+    </ul>
+{% endblock %}

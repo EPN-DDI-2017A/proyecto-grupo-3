@@ -1,0 +1,181 @@
+{% extends 'menu.html.twig' %}
+
+{% block body %}
+
+    {# -- Titulo Principal -- #}
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="">Encuentra la pareja perfecta</h2>
+            <h4 class="text-muted">Ingresa tus datos</h4>
+        </div>
+    </div>
+    {# -- Comienza Formulario -- #}
+    <div class="row">
+        <div class="col">
+            {{ form_start(edit_form, { 'attr' : {
+                'id' : 'modificar',
+                'class' : 'form-group',
+            }}) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <div class="row">
+                <div class="col">
+                    {% if fotos %}
+                        <h3 class="text-center">Foto Actual</h3>
+                        <img class="imagenPerfil" src="{{ fotos.foto }}" alt="Foto Perfil" width="250" height="250">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="btn boton2" href=" {{ path('galeria_new') }} ">Subir Foto</a>
+                </div>
+            </div>
+            <div>
+                <h3>Sobre ti:</h3>
+                {{ form_widget(edit_form.descripcion, { 'attr' : {
+                    'class' : 'form-control'
+
+                }}) }}
+            </div>
+            <div>
+                <h3>Carrera: </h3>
+                {{ form_widget(edit_form.carrera, { 'attr' : {
+                    'class' : 'form-control'
+                }}) }}
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="row">
+                <div class="col-3">
+                    <h3>Nombre: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.nombre, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Apellido: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.apellido, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            {#<div class="row">
+                <div class="col-3">
+                    <h3>Usuario: </h3>
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.username, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+            #}
+            <div class="row">
+                <div class="col-3">
+                    <h3>Nacimiento:  </h3>
+                </div>
+                <div class="col-8">
+
+                        {{ form_widget(edit_form.fnaci, { 'attr' : {
+                            'class' : 'form-control'
+                        }}) }}
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Teléfono: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.fono, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Sexo: </h3>
+                </div>
+                <div class="col-8 form-check form-check-inline">
+                    {{ form_widget(edit_form.sexo, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Dirección: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.direccion, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>País: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.pais, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Provincia: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.provincia, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Ciudad: </h3>
+                </div>
+                <div class="col-8">
+                    {{ form_widget(edit_form.ciudad, { 'attr' : {
+                        'class' : 'form-control'
+                    }}) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input class="btn boton2" type="submit" value="Guardar" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{ form_end(edit_form) }}
+    <div class="row">
+        {{ form_start(delete_form) }}
+        <div class="col">
+            <input class="btn btn-danger" type="submit" value="Eliminar">
+        </div>
+        {{ form_end(delete_form) }}
+    </div>
+
+{% endblock %}

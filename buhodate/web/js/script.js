@@ -85,4 +85,27 @@ function scaleBannerVideoSize(element){
         $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 
     });
+<<<<<<< HEAD
+=======
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+
+        $(".topnav").toggleClass("text-right");
+        x.className += " responsive";
+
+    } else {
+        if(x.className === "text-center"){
+            x.removeClass(" text-center");
+            x.className += " text-right";
+        }
+        x.className = "topnav";
+    }
+    $("#logo").toggleClass("text-center");
+
+
+
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

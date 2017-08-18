@@ -1,0 +1,107 @@
+{% extends 'menu.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col">
+            <h3 class="text-muted text-center" id="nombre"><strong>Perfil: </strong>{{ user.username }}</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col offset-4">
+            {% if foto %}
+                <img class="imagenPerfil" src="{{ foto.foto }}" alt="Foto Perfil" width="300" height="300">
+            {% endif %}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+
+            <div>
+                <h3>Acerca de:</h3>
+                <p>{{ user.descripcion }}</p>
+            </div>
+            <div>
+                <h3>Carrera: </h3>
+                <p>Tecnología en {{ user.carrera }}</p>
+            </div>
+            <div>
+                <h3>Correo: </h3>
+                <p>{{ user.email }}</p>
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-sm-12">
+
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Edad: </h3>
+                </div>
+                <div class="col-9">
+                    {% if user.fnaci %}
+                        <h4 class="text-muted" id="edad">
+                            {{ "now"|date("Y-m-d") - user.fnaci|date('Y-m-d') }} años
+                        </h4>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Teléfono: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="fono">(+593) {{ user.fono }}</h4>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Sexo: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="sexo">{{ user.sexo }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>País: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="pais">{{ user.pais }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Provincia: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="provincia">{{ user.provincia }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <h3>Ciudad: </h3>
+                </div>
+                <div class="col-9">
+                    <h4 class="text-muted" id="ciudad">{{ user.ciudad }}</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <a class="btn boton2" href="{{ path('cita_new', { 'id' : user.id}) }}">Solicitar Cita</a>
+        </div>
+    </div>
+
+{% endblock %}

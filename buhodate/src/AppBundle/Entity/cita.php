@@ -24,6 +24,7 @@ class cita
     /**
      * @var int
      *
+<<<<<<< HEAD
      * @ORM\Column(name="id_Emisor", type="integer")
      */
     private $idEmisor;
@@ -31,11 +32,14 @@ class cita
     /**
      * @var int
      *
+=======
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
      * @ORM\Column(name="id_Receptor", type="integer")
      */
     private $idReceptor;
 
     /**
+<<<<<<< HEAD
      * @var string
      *
      * @ORM\Column(name="estado", type="string", length=30)
@@ -55,15 +59,27 @@ class cita
      * @ORM\Column(name="f_fin", type="datetime", nullable=true)
      */
     private $fFin;
+=======
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=true)
+     */
+    private $fecha;
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="direccion", type="string", length=100, nullable=true)
+=======
+     * @ORM\Column(name="direccion", type="string", length=500, nullable=true)
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
      */
     private $direccion;
 
     /**
+<<<<<<< HEAD
      * @var int
      *
      * @ORM\Column(name="calificacion", type="integer", nullable=true)
@@ -75,6 +91,20 @@ class cita
      * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
      */
     private $usuario;
+=======
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=20)
+     */
+    private $estado;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="citas")
+     * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     */
+    private $usuarios;
+
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
     /**
      * Get id
@@ -87,6 +117,7 @@ class cita
     }
 
     /**
+<<<<<<< HEAD
      * Set idEmisor
      *
      * @param integer $idEmisor
@@ -111,6 +142,8 @@ class cita
     }
 
     /**
+=======
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
      * Set idReceptor
      *
      * @param integer $idReceptor
@@ -135,6 +168,7 @@ class cita
     }
 
     /**
+<<<<<<< HEAD
      * Set estado
      *
      * @param string $estado
@@ -168,11 +202,23 @@ class cita
     public function setFInicio($fInicio)
     {
         $this->fInicio = $fInicio;
+=======
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     *
+     * @return cita
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get fInicio
      *
      * @return \DateTime
@@ -192,11 +238,33 @@ class cita
     public function setFFin($fFin)
     {
         $this->fFin = $fFin;
+=======
+     * Get fecha
+     *
+     * @return \DateTime
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set direccion
+     *
+     * @param string $direccion
+     *
+     * @return cita
+     */
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get fFin
      *
      * @return \DateTime
@@ -216,11 +284,33 @@ class cita
     public function setDireccion($direccion)
     {
         $this->direccion = $direccion;
+=======
+     * Get direccion
+     *
+     * @return string
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * Set estado
+     *
+     * @param string $estado
+     *
+     * @return cita
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get direccion
      *
      * @return string
@@ -240,11 +330,33 @@ class cita
     public function setCalificacion($calificacion)
     {
         $this->calificacion = $calificacion;
+=======
+     * Get estado
+     *
+     * @return string
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * Set usuarios
+     *
+     * @param \AppBundle\Entity\User $usuarios
+     *
+     * @return cita
+     */
+    public function setUsuarios(\AppBundle\Entity\User $usuarios = null)
+    {
+        $this->usuarios = $usuarios;
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get calificacion
      *
      * @return int
@@ -255,3 +367,16 @@ class cita
     }
 }
 
+=======
+     * Get usuarios
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUsuarios()
+    {
+        return $this->usuarios;
+    }
+
+
+}
+>>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
