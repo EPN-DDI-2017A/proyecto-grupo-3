@@ -1,8 +1,75 @@
 /**
  * Created by andrestaipe on 13/7/17.
  */
-$( document ).ready(function() {
+$(document).ready(function() {
 
+    //MODAL
+
+    $("#btnregistrologin").on("click",function (e) {
+        e.preventDefault();
+        $("#registromodal").removeClass("modalnone");
+        $("#loginmodal").addClass("modalnone");
+    });
+
+    $("#btnloginregistro").on("click",function (e) {
+        e.preventDefault();
+        $("#loginmodal").removeClass("modalnone");
+        $("#registromodal").addClass("modalnone");
+
+    });
+
+    // FORMULARIO DE CONTACTOS
+    $("#btnenviar").on('click', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'app/Resources/views/default/formulariocontactos.php',
+            method: 'post',
+            dataType: 'json',
+            data: {
+                email: $("#email").val(),
+                nombre: $("#nombre").val(),
+                asunto: $("#asunto").val(),
+                mensaje: $("#mensaje").val()
+            },
+            success: function (data) {
+                console.log("success");
+                console.log(data.mensaje);
+
+                var clase_msg = 'alert-success';
+                if (data.error) {
+                    clase_msg = 'alert-danger';
+                }
+
+                var html = '<div id="sms" class="alert ' + clase_msg +  ' alert-dismissible" role="alert">';
+                html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                html += '<span aria-hidden="true">&times;</span>';
+                html += '</button>';
+                html += data.mensaje;
+                html += '</div>';
+
+                $('.container').prepend(html);
+
+                $('#sms').slideUp(10000);
+            },
+            error:function () {
+                console.log("error");
+            },
+            always:function() {
+                console.log("done");
+            }
+
+        });
+
+    });
+
+    //ACTIVE ON NAVS
+
+    $(".navbar-nav li").on("click", function() {
+        $(".navbar-nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    //VIDEO
     scaleVideoContainer();
 
     initBannerVideoSize('.video-container .poster img');
@@ -16,7 +83,7 @@ $( document ).ready(function() {
         scaleBannerVideoSize('.video-container video');
     });
 
-    // Add scrollspy to <body>
+    // scroll
     $('body').scrollspy({target: ".nav", offset: 200});
 
     // Add smooth scrolling on all links inside the navbar
@@ -85,27 +152,4 @@ function scaleBannerVideoSize(element){
         $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 
     });
-<<<<<<< HEAD
-=======
-}
-
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-
-        $(".topnav").toggleClass("text-right");
-        x.className += " responsive";
-
-    } else {
-        if(x.className === "text-center"){
-            x.removeClass(" text-center");
-            x.className += " text-right";
-        }
-        x.className = "topnav";
-    }
-    $("#logo").toggleClass("text-center");
-
-
-
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

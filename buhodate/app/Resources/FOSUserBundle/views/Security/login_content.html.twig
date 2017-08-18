@@ -9,8 +9,8 @@
 
 {# --- Logo --- #}
 <div class="row">
-    <div class="col">
-        <img class="text-center align-self-center" src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
+    <div class="col offset-5">
+        <img class="" src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
     </div>
 </div>
 {# --- Mensaje de Error ---#}
@@ -49,14 +49,14 @@
 
     {# --- Boton de Ingreso --- #}
     <div class="row">
-        <div class="col">
+        <div class="col offset-4">
             <input class="btn boton1" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
         </div>
     </div>
     {# -- Link de Registro -- #}
     <div class="row">
         <div class="col">
-            <p class="text-center">¿Aún no tienes cuenta? <a href="{{ asset('/registro') }}">Regístrate</a></p>
+            <p class="text-center">¿Aún no tienes cuenta? <a id="btnregistrologin" href="{{ asset('/registro') }}">Regístrate</a></p>
         </div>
     </div>
 

@@ -2,20 +2,6 @@
 
 namespace AppBundle\Controller;
 
-<<<<<<< HEAD
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-class galeriaController extends Controller
-{
-    /**
-     * @Route("/crearg")
-     */
-    public function crearAction()
-    {
-        return $this->render('AppBundle:galeria:crear.html.twig', array(
-            // ...
-=======
 use AppBundle\Entity\galeria;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -91,19 +77,10 @@ class galeriaController extends Controller
             'galeria' => $galeria,
             'form' => $form->createView(),
             'user' => $uss,
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
         ));
     }
 
     /**
-<<<<<<< HEAD
-     * @Route("/modificarg")
-     */
-    public function modificarAction()
-    {
-        return $this->render('AppBundle:galeria:modificar.html.twig', array(
-            // ...
-=======
      * Finds and displays a galeria entity.
      *
      * @Route("/{id}", name="galeria_show")
@@ -116,22 +93,10 @@ class galeriaController extends Controller
         return $this->render('galeria/show.html.twig', array(
             'galeria' => $galeria,
             'delete_form' => $deleteForm->createView(),
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
         ));
     }
 
     /**
-<<<<<<< HEAD
-     * @Route("/eliminaerg")
-     */
-    public function eliminarAction()
-    {
-        return $this->render('AppBundle:galeria:eliminar.html.twig', array(
-            // ...
-        ));
-    }
-
-=======
      * Displays a form to edit an existing galeria entity.
      *
      * @Route("/{id}/edit", name="galeria_edit")
@@ -198,5 +163,4 @@ class galeriaController extends Controller
     }
 
 
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

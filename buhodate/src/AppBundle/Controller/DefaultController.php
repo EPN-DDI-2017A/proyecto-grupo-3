@@ -5,8 +5,6 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-<<<<<<< HEAD
-=======
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Security;
@@ -21,21 +19,10 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
 class DefaultController extends Controller
 {
     /**
-<<<<<<< HEAD
-     * @Route("/", name="homepage")
-     */
-    public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
-=======
      *
      * @Route("/", name="homepage")
      *
@@ -104,7 +91,7 @@ class DefaultController extends Controller
                 $userManager->updateUser($user);
 
                 if (null === $response = $event->getResponse()) {
-                    $url = $this->generateUrl('fos_user_registration_confirmed');
+                    $url = $this->generateUrl('usuario_index');
                     $response = new RedirectResponse($url);
                 }
 
@@ -204,6 +191,5 @@ class DefaultController extends Controller
     public function adminAction()
     {
         return new Response('<html><body>Admin page!</body></html>');
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
     }
 }

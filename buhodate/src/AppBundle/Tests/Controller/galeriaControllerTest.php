@@ -6,29 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class galeriaControllerTest extends WebTestCase
 {
-<<<<<<< HEAD
-    public function testCrear()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/crear');
-    }
-
-    public function testModificar()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/modificarg');
-    }
-
-    public function testEliminar()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/eliminaerg');
-    }
-
-=======
     /*
     public function testCompleteScenario()
     {
@@ -75,5 +52,4 @@ class galeriaControllerTest extends WebTestCase
     }
 
     */
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

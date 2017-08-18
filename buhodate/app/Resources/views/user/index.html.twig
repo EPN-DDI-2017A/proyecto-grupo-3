@@ -5,7 +5,7 @@
         {% for user in users %}
 
             {% if usuario.id != user.id %}
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div id="perfil" class="col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="row">
                         <div class="col" id="fotoInicio">
                             {% for galeria in galerias%}
@@ -23,6 +23,7 @@
                         </div>
                     </div>
                 </div>
+                <br>
             {% endif %}
 
         {% endfor %}

@@ -2,12 +2,6 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-<<<<<<< HEAD
-login:
-    path: /registro
-    defaults: { _controller: AppBundle:usuario:registro}
-
-=======
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
@@ -25,4 +19,3 @@ fos_user_registration_confirmed:
 fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
     prefix: /perfil
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813

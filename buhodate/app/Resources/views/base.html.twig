@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-=======
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}BuhoDate | ESFOT{% endblock %}</title>
@@ -24,21 +12,7 @@
     {% endblock %}
 </head>
 <body>
-{% block body %}{% endblock %}
-{% block footer %}
-    <div class="container">
-        <div class="row">
-            <div class="col-8 text-white">
-                <p><strong>BuhoDate</strong> Copyright: © 2017. Todos los derechos reservados.</p>
-            </div>
-            <div class="col-4" id="foot_SN">
-                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
+{% block body %}
 {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
@@ -46,10 +20,10 @@
     <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('js/localization/messages_es.js') }}"></script>
     <script src="{{ asset('js/additional-methods.min.js') }}"></script>
+    <script src="{{ asset('js/js.cookie.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 {% endblock %}
 </body>
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 </html>

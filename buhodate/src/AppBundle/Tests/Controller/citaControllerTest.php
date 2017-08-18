@@ -6,29 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class citaControllerTest extends WebTestCase
 {
-<<<<<<< HEAD
-    public function testCrear()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/crearc');
-    }
-
-    public function testModificar()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/modificarc');
-    }
-
-    public function testCancelar()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/cancelarc');
-    }
-
-=======
     /*
     public function testCompleteScenario()
     {
@@ -75,5 +52,4 @@ class citaControllerTest extends WebTestCase
     }
 
     */
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

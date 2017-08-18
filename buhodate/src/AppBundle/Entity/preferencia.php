@@ -3,10 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-<<<<<<< HEAD
-=======
 use Doctrine\Common\Collections\ArrayCollection;
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 
 /**
  * preferencia
@@ -28,11 +25,7 @@ class preferencia
     /**
      * @var string
      *
-<<<<<<< HEAD
-     * @ORM\Column(name="tipo", type="string", length=50, nullable=true)
-=======
      * @ORM\Column(name="tipo", type="string", length=255, nullable=true)
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
      */
     private $tipo;
 
@@ -46,19 +39,12 @@ class preferencia
     /**
      * @var string
      *
-<<<<<<< HEAD
-     * @ORM\Column(name="estado", type="string", length=50)
-=======
      * @ORM\Column(name="estado", type="string", length=20)
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
      */
     private $estado;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
     /**
      * Get id
      *

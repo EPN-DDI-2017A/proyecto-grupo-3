@@ -13,15 +13,16 @@
 </head>
 <body>
 <div class="container">
-    {#MENU PRINCIPAL#}
-    <div class="row" id="menuprincipal">
-        <div class=" col col-lg-4 col-md-3 col-sm-12">
-            <a href="{{ path('usuario_index') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
-        </div>
-        <div class="col col-lg-8 col-md-9 col-sm-12" id="pest">
-            <ul class="nav" id="perfil-menu">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ path('usuario_index') }}">Inicio</a>
+    <nav class="navbar navbar-toggleable-md navbar-light" id="menuprincipal">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ path('usuario_index') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="perfil-menu" class="navbar-nav mr-auto text-center">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{{ path('usuario_index') }}">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED")  %}
                 <li class="nav-item">
@@ -32,16 +33,17 @@
                     <a class="nav-link" href="{{ path('cita_index') }}">Citas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Notificaciones</a>
+                    <a class="nav-link" href="{{ path('cita_not') }}">Notificaciones</a>
                 </li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Salir</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Salir</a>
+                    </li>
                 {% endif %}
+
             </ul>
         </div>
-    </div>
+    </nav>
 
     {% block body %}{% endblock %}
 
@@ -50,10 +52,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-8 text-muted">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-8 text-muted">
                     <p><strong>BuhoDate</strong> Copyright: © 2017. Todos los derechos reservados.</p>
                 </div>
-                <div class="col-4" id="foot_SN">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4" id="foot_SN">
                     <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -69,6 +71,7 @@
     <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('js/localization/messages_es.js') }}"></script>
     <script src="{{ asset('js/additional-methods.min.js') }}"></script>
+    <script src="{{ asset('js/js.cookie.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>

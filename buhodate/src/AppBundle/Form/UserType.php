@@ -1,5 +1,4 @@
 <?php
-
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
@@ -34,11 +33,11 @@ class UserType extends AbstractType
                 'multiple'=>false,
                 'expanded'=>true,
             ))
-            ->add('fnaci', BirthdayType::class, ['required'=> false], array(
+            ->add('fnaci', BirthdayType::class, array(
                 'widget' => 'choice',
                 'placeholder' => array(
                     'years' => 'Año', 'month' => 'Mes', 'day' => 'Día'
-                )
+                ),
             ))
             ->add('pais', CountryType::class, array(
                 "preferred_choices" => array(
@@ -57,12 +56,12 @@ class UserType extends AbstractType
                 ),
             ))
             ->add('descripcion', TextareaType::class, ['required'=> false]);
-            /*->add('foto',FileType::class, array(
-                'mapped' => false,
-                'required' => false
-            ));*/
+        /*->add('foto',FileType::class, array(
+            'mapped' => false,
+            'required' => false
+        ));*/
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -72,7 +71,6 @@ class UserType extends AbstractType
             'data_class' => 'AppBundle\Entity\User'
         ));
     }
-
     /**
      * {@inheritdoc}
      */
@@ -80,6 +78,4 @@ class UserType extends AbstractType
     {
         return 'appbundle_user';
     }
-
-
 }

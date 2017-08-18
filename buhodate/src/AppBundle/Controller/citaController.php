@@ -2,20 +2,6 @@
 
 namespace AppBundle\Controller;
 
-<<<<<<< HEAD
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-class citaController extends Controller
-{
-    /**
-     * @Route("/crearc")
-     */
-    public function crearAction()
-    {
-        return $this->render('AppBundle:cita:crear.html.twig', array(
-            // ...
-=======
 use AppBundle\Entity\cita;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -48,12 +34,67 @@ class citaController extends Controller
                 'tipo' => 'Perfil',
             )
         );
-        dump($galerias);
+        dump($citas);
         return $this->render('cita/index.html.twig', array(
             'citas' => $citas,
             'galerias' => $galerias,
             'user' => $usser,
             'usuarios'=>$usuarios,
+        ));
+    }
+
+    /**
+     * Lists all citum entities.
+     *
+     * @Route("/notificaciones", name="cita_not")
+     * @Method("GET")
+     */
+    public function  notificacionesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $usser = $this->getUser();
+        $usuarios = $em->getRepository('AppBundle:User')->findAll();
+
+        $citas = $em->getRepository('AppBundle:cita')->findAll();
+        $galerias = $em->getRepository('AppBundle:galeria')->findBy(
+            array(
+                'tipo' => 'Perfil',
+            )
+        );
+        dump($citas);
+        dump($usuarios);
+        return $this->render('cita/notificaciones.html.twig', array(
+            'citas' => $citas,
+            'galerias' => $galerias,
+            'user' => $usser,
+            'usuarios'=>$usuarios,
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing citum entity.
+     *
+     * @Route("/{id_cita}/mod", name="cita_mod")
+     * @Method({"GET", "POST"})
+     */
+    public function modificarAction(Request $request, cita $cita, $evento)
+    {
+
+        if ($evento == "1") {
+            $cita->setEstado('aceptado');
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('cita_not');
+        }else if ($evento == "2") {
+            $cita->setEstado('rechazado');
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('cita_not');
+        }
+
+        return $this->render('cita/index.html.twig', array(
+            'cita' => $cita,
         ));
     }
 
@@ -91,19 +132,10 @@ class citaController extends Controller
             'form' => $form->createView(),
             'usuario' => $usuario,
             'receptor' => $user
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
         ));
     }
 
     /**
-<<<<<<< HEAD
-     * @Route("/modificarc")
-     */
-    public function modificarAction()
-    {
-        return $this->render('AppBundle:cita:modificar.html.twig', array(
-            // ...
-=======
      * Finds and displays a citum entity.
      *
      * @Route("/{id}", name="cita_show")
@@ -116,22 +148,10 @@ class citaController extends Controller
         return $this->render('cita/show.html.twig', array(
             'cita' => $cita,
             'delete_form' => $deleteForm->createView(),
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
         ));
     }
 
     /**
-<<<<<<< HEAD
-     * @Route("/cancelarc")
-     */
-    public function cancelarAction()
-    {
-        return $this->render('AppBundle:cita:cancelar.html.twig', array(
-            // ...
-        ));
-    }
-
-=======
      * Displays a form to edit an existing citum entity.
      *
      * @Route("/{id}/edit", name="cita_edit")
@@ -191,5 +211,4 @@ class citaController extends Controller
             ->getForm()
         ;
     }
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 }

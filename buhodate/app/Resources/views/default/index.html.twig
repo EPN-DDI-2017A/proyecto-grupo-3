@@ -1,80 +1,3 @@
-<<<<<<< HEAD
-{% extends 'base.html.twig' %}
-
-{% block body %}
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-            </div>
-
-            <div id="status">
-                <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
-
-                    Your application is now ready. You can start working on it at:
-                    <code>{{ base_dir }}</code>
-                </p>
-            </div>
-
-            <div id="next">
-                <h2>What's next?</h2>
-                <p>
-                    <svg id="icon-book" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-12.5 9 64 64" enable-background="new -12.5 9 64 64" xml:space="preserve">
-                        <path fill="#AAA" d="M6.8,40.8c2.4,0.8,4.5-0.7,4.9-2.5c0.2-1.2-0.3-2.1-1.3-3.2l-0.8-0.8c-0.4-0.5-0.6-1.3-0.2-1.9
-                            c0.4-0.5,0.9-0.8,1.8-0.5c1.3,0.4,1.9,1.3,2.9,2.2c-0.4,1.4-0.7,2.9-0.9,4.2l-0.2,1c-0.7,4-1.3,6.2-2.7,7.5
-                            c-0.3,0.3-0.7,0.5-1.3,0.6c-0.3,0-0.4-0.3-0.4-0.3c0-0.3,0.2-0.3,0.3-0.4c0.2-0.1,0.5-0.3,0.4-0.8c0-0.7-0.6-1.3-1.3-1.3
-                            c-0.6,0-1.4,0.6-1.4,1.7s1,1.9,2.4,1.8c0.8,0,2.5-0.3,4.2-2.5c2-2.5,2.5-5.4,2.9-7.4l0.5-2.8c0.3,0,0.5,0.1,0.8,0.1
-                            c2.4,0.1,3.7-1.3,3.7-2.3c0-0.6-0.3-1.2-0.9-1.2c-0.4,0-0.8,0.3-1,0.8c-0.1,0.6,0.8,1.1,0.1,1.5c-0.5,0.3-1.4,0.6-2.7,0.4l0.3-1.3
-                            c0.5-2.6,1-5.7,3.2-5.8c0.2,0,0.8,0,0.8,0.4c0,0.2,0,0.2-0.2,0.5c-0.2,0.3-0.3,0.4-0.2,0.7c0,0.7,0.5,1.1,1.2,1.1
-                            c0.9,0,1.2-1,1.2-1.4c0-1.2-1.2-1.8-2.6-1.8c-1.5,0.1-2.8,0.9-3.7,2.1c-1.1,1.3-1.8,2.9-2.3,4.5c-0.9-0.8-1.6-1.8-3.1-2.3
-                            c-1.1-0.7-2.3-0.5-3.4,0.3c-0.5,0.4-0.8,1-1,1.6c-0.4,1.5,0.4,2.9,0.8,3.4l0.9,1c0.2,0.2,0.6,0.8,0.4,1.5c-0.3,0.8-1.2,1.3-2.1,1
-                            c-0.4-0.2-1-0.5-0.9-0.9c0.1-0.2,0.2-0.3,0.3-0.5s0.1-0.3,0.1-0.3c0.2-0.6-0.1-1.4-0.7-1.6c-0.6-0.2-1.2,0-1.3,0.8
-                            C4.3,38.4,4.7,40,6.8,40.8z M46.1,20.9c0-4.2-3.2-7.5-7.1-7.5h-3.8C34.8,10.8,32.7,9,30.2,9L-2.3,9.1c-2.8,0.1-4.9,2.4-4.9,5.4
-                            L-7,58.6c0,4.8,8.1,13.9,11.6,14.1l34.7-0.1c3.9,0,7-3.4,7-7.6L46.1,20.9z M-0.3,36.4c0-8.6,6.5-15.6,14.5-15.6
-                            c8,0,14.5,7,14.5,15.6S22.1,52,14.2,52C6.1,52-0.3,45-0.3,36.4z M42.1,65.1c0,1.8-1.5,3.1-3.1,3.1H4.6c-0.7,0-3-1.8-4.5-4.4h30.4
-                            c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
-                    </svg>
-
-                    Read the documentation to learn
-                    <a href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/page_creation.html">
-                        How to create your first page in Symfony
-                    </a>
-                </p>
-            </div>
-
-        </div>
-    </div>
-{% endblock %}
-
-{% block stylesheets %}
-<style>
-    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
-    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 21px; margin-bottom: 1em; }
-    p { margin: 0 0 1em 0; }
-    a { color: #0000F0; }
-    a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
-    #container { padding: 2em; }
-    #welcome, #status { margin-bottom: 2em; }
-    #welcome h1 span { display: block; font-size: 75%; }
-    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
-    #icon-book { display: none; }
-
-    @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; }
-
-        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
-    }
-</style>
-=======
 {% extends "base.html.twig" %}
 {# Modal ver include para añadir otro twig#}
 {% block title %}BuhoDate | ESFOT{% endblock %}
@@ -82,26 +5,16 @@
 {% block body %}
     <div class="container">
         {#Header logo y navegación#}
+        <nav class="navbar navbar-toggleable-md navbar-light" id="menuprincipal">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{{ asset('/') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
 
-        <div class="row">
-            <div id="logo" class="col"><a href="{{ asset('/') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a></div>
-            <div class="col topnav text-right" id="myTopnav">
-                <a class="nav-link active" href="{{ asset('/') }}">Inicio</a>
-                <a class="nav-link" href="#demostracion">Demostración</a>
-                <a class="nav-link" href="#contactos">Contáctos</a>
-                <a class="nav-link" href="{{ asset('/login') }}">Iniciar Sesión</a>
-                <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
-            </div>
-        </div>
-
-        {#<div class="row" id="menu">
-            <div class=" col col-lg-4 col-md-3 col-sm-12">
-                <a href="{{ asset('/index') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
-            </div>
-            <div class="col col-lg-8 col-md-9 col-sm-12" id="pestanas">
-                <ul class="nav" id="index-menu">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ asset('/') }}">Buscar Cita</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="perfil-menu" class="navbar-nav mr-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{{ asset('/') }}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#demostracion">Demostración</a>
@@ -109,9 +22,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contactos">Contactos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ asset('/login') }}">Iniciar Sesión</a>
+                    </li>
+
                 </ul>
             </div>
-        </div>#}
+        </nav>
+
 
         {# Video de Fondo#}
         <div class="row fondo">
@@ -128,22 +46,22 @@
                 {#Redes Sociales Header#}
                 <div class="row icon_social">
                     <div class="col">
-                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook fa" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="row icon_social">
                     <div class="col">
-                        <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="row icon_social">
                     <div class="col">
-                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="row icon_social">
                     <div class="col">
-                        <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -156,28 +74,35 @@
                     </div>
                 </div>
 
-                <div class="row">
+               {#<div class="row">
                     <div class="col btnvideo">
                         <a class="boton1" href="{{ asset('/login') }}">Buscar Cita</a>
                     </div>
-                </div>
+                </div>#}
 
-                {# --- LOGIN MODAL ---
+               {#--- LOGIN MODAL ---#}
+                <div class="row">
+                    <div class="col btnvideo">
+                        <button class="boton1" data-toggle="modal" data-target=".modal">Buscar Cita</button>
 
-                <button type="button" class="boton1" data-toggle="modal" data-target=".modal">Buscar Cita</button>
+                        <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div id="loginmodal">
+                                        {{ include('@FOSUser/Security/login.html.twig') }}
+                                    </div>
+                                    <div id="registromodal" class="modalnone">
+                                        {% include ('@FOSUser/Registration/register_content.html.twig') %}
+                                    </div>
 
-                <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                    <div class="modal-dialog ">
-                        <div class="modal-content">
-
-                            {{ include('@FOSUser/Security/login.html.twig') }}
-
-
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                #}
             </div>
         </div>
         {# Demostración #}
@@ -190,48 +115,48 @@
                 {# Card Boostrap#}
                 <div class="row" id="demo2">
                     {# Regístrate #}
-                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top align-self-center" src="{{ asset('image/registro.png') }}" alt="registro" width="200" height="200">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/registro.png') }}" alt="registro" >
                             <div class="card-block text-muted">
                                 <h4 class="card-title text-center">Regístrate</h4>
-                                <p class="card-text text-justify">
+                                <p class="card-text text-center">
                                     Crea una cuenta con tu correo institucional y una contraseña
                                 </p>
                             </div>
                         </div>
                     </div>
                     {# Perfil #}
-                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top align-self-center" src="{{ asset('image/perfil.png') }}" alt="perfil" width="200" height="200">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/perfil.png') }}" alt="perfil">
                             <div class="card-block text-muted">
                                 <h4 class="card-title text-center">Crea un perfil</h4>
-                                <p class="card-text text-justify">
+                                <p class="card-text text-center">
                                     Personaliza tu perfil, agrega tu foto y describe tus pasatiempos
                                 </p>
                             </div>
                         </div>
                     </div>
                     {# Buscar #}
-                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top align-self-center" src="{{ asset('image/buscar_perfil.png') }}" alt="perfil" width="200" height="200">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/buscar_perfil.png') }}" alt="perfil">
                             <div class="card-block text-muted">
                                 <h4 class="card-title text-center">Busca a la persona ideal</h4>
-                                <p class="card-text text-justify">
+                                <p class="card-text text-center">
                                     Empieza a conocer personas, ya solo estas a un solo paso.
                                 </p>
                             </div>
                         </div>
                     </div>
                     {# Cita #}
-                    <div class="col col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
-                            <img class="card-img-top align-self-center" src="{{ asset('image/calendar.png') }}" alt="perfil" width="200" height="200">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/calendar.png') }}" alt="perfil">
                             <div class="card-block text-muted">
                                 <h4 class="card-title text-center">Haz la cita</h4>
-                                <p class="card-text text-justify">
+                                <p class="card-text text-center">
                                     Ten una cita y preparate para vivir experiencias inolvidables
                                 </p>
                             </div>
@@ -240,8 +165,8 @@
                 </div>
                 {# Boton Demo #}
                 <div class="row" id="demo3">
-                    <div class="col col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-2">
-                        <button class="boton2" data-toggle="modal" data-target=".bd-example-modal-lg">Ver Demo</button>
+                    <div class="col col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-2 align-self-center">
+                        <button id="btndemo" class="boton2" data-toggle="modal" data-target=".bd-example-modal-lg">Ver Demo</button>
                         {# MODAL #}
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -261,9 +186,9 @@
     {# Contactos #}
     <div class="container-fluid" id="contactos">
         <div class="container">
-            <div class="row">
+            <div class="row align align-items-center">
                 {# Datos de Contactos #}
-                <div class="col col-lg-5 col-sm-12" id="datos_cont">
+                <div class="col-12 col-lg-5 col-sm-12" id="datos_cont">
                     <div><h2 class="">Contáctanos en: </h2></div>
                     <br>
                     <div>
@@ -274,28 +199,59 @@
                         <br>
                         <i class="fa fa-envelope" aria-hidden="true"> info@epn.edu.ec</i>
                     </div>
+                    <br>
+                    <div>
+                        <iframe
+                                width="430"
+                                height="280"
+                                frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCo2Z5QkG9TiIangl8Ff8rE9_bOASvZj-0&q=Escuela+Politécnica+Nacional+Ladron+de+Guevera+E11-253" allowfullscreen>
+                        </iframe>
+                    </div>
+
                 </div>
                 {# Logo 2#}
-                <div class="col col-lg-2 col-sm-12 text-center">
+                <div class="col-12 col-lg-2 col-sm-12 align-self-center">
                     <img src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
                 </div>
                 {# Formulario #}
-                <div class="col col-lg-5 col-sm-12" id="form_sms">
+                <div class="col-12 col-lg-5 col-sm-12" id="form_sms">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Asunto">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Mensaje">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formGroupExampleInput2" class="form-control" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
                         </div>
                         <div>
-                            <button class="btn btn-warning">Enviar</button>
+                            <button id="btnenviar" class="btn btn-warning">Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-8 text-white">
+                        <p><strong>BuhoDate</strong> Copyright: © 2017. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" id="foot_SN">
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 {% endblock %}

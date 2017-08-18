@@ -38,32 +38,17 @@ h1{
 }
 
 .boton1{
-<<<<<<< HEAD
-    width: 45%;
-    height: 50px;
-=======
-    width: 70%;
-    height: 40px;
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
+    width: 55%;
+    height: 45px;
     background: #ff7a55;
     border: none;
     border-radius: 25px;
     font-size: 200%;
     color: #ffffff;
     opacity: 0.8;
-<<<<<<< HEAD
-    padding: 1%;
+    padding: 5px 8%;
 }
-.boton1:hover{
-    background: gray;
-=======
-    padding: 5px 10%;
-}
-.boton1:hover{
-    background: gray;
-    text-decoration: none;
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
-}
+
 .distancia{
     padding-left: 25%;
 }
@@ -85,12 +70,9 @@ a:hover{
 .msj1 h1{
     font-size: 400%;
 }
-<<<<<<< HEAD
-=======
 .btnvideo{
     padding-left: 25%;
 }
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
 .fondo{
     position: absolute;
 }
@@ -108,21 +90,48 @@ a:hover{
     border: none;
 }
 .boton2{
-    width: 60%;
+    width: 70%;
     height: 50px;
+    opacity: 0.9;
+    font-size: 200%;
+    font-weight: 300;
+    padding: 4px 10%;
     background: #ffffff;
     border:solid;
     border-radius: 25px;
+    border-width: medium;
     border-color: #ff7a55;
-    font-size: 25px;
     color: #ff7a55;
-    opacity: 1;
-    padding: 1%;
-    margin-left: 20%;
 }
-.boton2:hover{
+
+.boton3{
+    width: 70%;
+    height: 50px;
+    opacity: 0.9;
+    font-size: 200%;
+    font-weight: 300;
+    padding: 4px 10%;
+    background: #ffffff;
+    border:solid;
+    border-radius: 25px;
+    border-width: medium;
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.boton1:hover, .boton2:hover, .boton3:hover{
     background: gray;
+    text-decoration: none;
+    opacity: 0.8;
 }
+.aceptar{
+    margin-bottom: 3%;
+}
+.card img{
+    width:200px;
+    height:200px;
+}
+
 #demo1{
     font-size: 150%;
 }
@@ -165,8 +174,6 @@ a:hover{
 footer{
     margin-top: 3%;
 }
-<<<<<<< HEAD
-=======
 .error{
     color: #ff7a55;
 }
@@ -181,22 +188,14 @@ footer{
     font-weight: 100;
 }
 #perfil-menu .nav-link:hover{
-    color: gray;
-    border-bottom: solid;
-    border-color: gray;
-    border-bottom-width: 3px;
+    background-color: lightgray;
 }
-#pest{
-    padding-top: 1%;
+.active{
+    background-color: lightgray;
 }
-#pest .active{
 
-}
 .imagenPerfil{
     border-radius: 50%;
-}
-#appbundle_cita_fecha_date select{
-
 }
 .topnav{
     overflow: hidden;
@@ -220,21 +219,37 @@ footer{
 .topnav .icon {
     display: none;
 }
-.col-8{
-    margin-left: 10px;
+.modalnone{
+    display: none;
 }
-.boton2{
-    margin-top: 30px;
+#perfil{
+    margin-bottom: 3%;
 }
-.btn-danger{
-
+#citainfo{
+    text-align: center;
+    margin-bottom: 3%;
 }
-@media screen and (max-width: 1200px){
-    h3{
+#perfilmod h3{
+    font-size: 120%;
+}
+@media screen and (min-width: 991px){
+    #navbarSupportedContent{
+        margin-left: 35%;
+    }
+    #citainfo{
+        text-align: left;
+    }
+    .aceptar{
+        margin-bottom: 15%;
+    }
+    #perfilmod h3{
         font-size: 140%;
     }
-}
+    .icon_social i{
+        font-size: 35px;
+    }
 
+}
 @media screen and (max-width: 990px){
     .msj1 h1{
         font-size: 300%;
@@ -243,37 +258,16 @@ footer{
         font-size: 150%;
         padding: 4px 8%;
     }
-    .topnav a {display: none;}
-    .topnav a.icon {
-        float: right;
-        display: block;
+
+    .demo{
+        margin-top:5%;
     }
-    .topnav.responsive {
-        position: relative;
+    #demo1{
+        font-size: 150%;
     }
 
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    h3{
-        font-size: 120%;
-    }
-    .row{
-        margin-top: 8px;
-    }
-    .col-4{
-        display: inline-flex;
-    }
-    /*.col-9{
-        margin-left: 40px;
-    }*/
+
+
 
 }
 
@@ -281,22 +275,21 @@ footer{
     .msj1 h1{
         font-size: 200%;
     }
-    .boton1{
+    .boton1, .boton2, .boton3{
         font-size: 150%;
         padding: 4px 8%;
     }
-    h3{
-        font-size: 120%;
+    .card img{
+        width:130px;
+        height:130px;
     }
-    .row{
-        margin-top: 8px;
+    .demo{
+        margin-top:10%;
     }
-    .btn-danger{
-        text-align: center;
+    #demo1{
+        font-size: 100%;
     }
-    .col-4{
-        display: inline-flex;
-    }
+
 
 }
 @media screen and (max-width: 570px){
@@ -304,59 +297,35 @@ footer{
         font-size: 150%;
     }
     .msj{
-        padding-left: 15%;
+        padding-left: 20%;
     }
-    .boton1{
+    .boton1, .boton2, .boton3{
         font-size: 120%;
         padding: 3px 6%;
     }
-    .row{
-        margin-top: 8px;
+    .demo{
+        margin-top:10%;
     }
-    .col-9{
-        margin-left: 20px;
+    #demo1{
+        font-size: 70%;
     }
-    .btn-danger{
-        margin-left: 90px;
+    .card img{
+        width:150px;
+        height:150px;
     }
-    .col-4{
-        display: inline-flex;
-    }
-}
-@media screen and (max-width: 570px) {
-    h3{
-        font-size: 120%;
-    }
-    .row{
-        margin-top: 8px;
-    }
-    .btn-danger{
-        margin-left: 90px;
-    }
-    .col-4{
-        display: inline-flex;
-    }
-}
 
-@media screen and (max-width: 500px) {
-    h3{
+
+}
+@media screen and (max-width: 400px){
+    #datos_cont iframe{
+        width:300px;
+        height:200px;
+    }
+    #perfilmod h3{
         font-size: 100%;
     }
-    .col-4{
-        display: inline-flex;
-    }
-    .row{
-        margin-top: 8px;
-    }
-    .btn-danger{
-        margin-left: 90px;
-    }
-}
-@media screen and (max-width: 500px) {
 
 }
 
 
 
-
->>>>>>> 0fc3177daa2b8bf49985945722d59de32fbd0813
